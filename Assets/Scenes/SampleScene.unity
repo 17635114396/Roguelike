@@ -672,11 +672,12 @@ MonoBehaviour:
   roomPrefab: {fileID: 4350761221553850470, guid: a58ed903dc23fab4f96797c132c9562a,
     type: 3}
   roomNumber: 10
-  startColor: {r: 1, g: 0.0990566, b: 0.0990566, a: 1}
-  endColor: {r: 0.83252645, g: 1, b: 0, a: 1}
+  startColor: {r: 0.58626485, g: 0.09803921, b: 1, a: 1}
+  endColor: {r: 1, g: 0.5330188, b: 0.8168703, a: 1}
   StartPoint: {fileID: 533730586}
   Xoffset: 66
   Yoffset: 36
+  maxStep: 0
   rooms: []
 --- !u!1 &2048746883
 GameObject:
