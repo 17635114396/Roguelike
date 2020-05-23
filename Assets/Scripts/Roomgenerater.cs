@@ -27,6 +27,8 @@ public class Roomgenerater : MonoBehaviour
     List<GameObject> farRooms = new List<GameObject>();
     List<GameObject> lessRooms = new List<GameObject>();
     List<GameObject> oneDoorRooms = new List<GameObject>();
+
+    public WallType wallType;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,6 +84,46 @@ public class Roomgenerater : MonoBehaviour
         room.leftroom = Physics2D.OverlapCircle(roomPosition + new Vector3(-Xoffset, 0, 0), 0.2f, roomlayer);
         room.rightroom = Physics2D.OverlapCircle(roomPosition + new Vector3(Xoffset, 0, 0), 0.2f, roomlayer);
         room.UpDateRoom();
+        switch (room.doorNumber)
+        {
+            case 1:
+                if (room.uproom)
+                    Instantiate(wallType.singleup, roomPosition, Quaternion.identity);
+                if (room.downroom)
+                    Instantiate(wallType.singledown, roomPosition, Quaternion.identity);
+                if (room.leftroom)
+                    Instantiate(wallType.singleleft, roomPosition, Quaternion.identity);
+                if (room.rightroom)
+                    Instantiate(wallType.singleright, roomPosition, Quaternion.identity);
+                break;
+            case 2:
+                if (room.uproom&& room.downroom)
+                    Instantiate(wallType.doubleupdown, roomPosition, Quaternion.identity);
+                if (room.uproom && room.leftroom)
+                    Instantiate(wallType.doubleupleft, roomPosition, Quaternion.identity);
+                if (room.uproom && room.rightroom)
+                    Instantiate(wallType.doubleupright, roomPosition, Quaternion.identity);
+                if (room.leftroom&& room.downroom)
+                    Instantiate(wallType.doubleleftdown, roomPosition, Quaternion.identity);
+                if (room.leftroom && room.rightroom)
+                    Instantiate(wallType.doubleleftright, roomPosition, Quaternion.identity);
+                if (room.rightroom&&room.downroom)
+                    Instantiate(wallType.doubledownright, roomPosition, Quaternion.identity);
+                break;
+            case 3:
+                if (room.uproom==false)
+                    Instantiate(wallType.triglenoup, roomPosition, Quaternion.identity);
+                if (room.downroom == false)
+                    Instantiate(wallType.triglenodown, roomPosition, Quaternion.identity);
+                if (room.rightroom == false)
+                    Instantiate(wallType.triglenoright, roomPosition, Quaternion.identity);
+                if (room.leftroom == false)
+                    Instantiate(wallType.triglenoleft, roomPosition, Quaternion.identity);
+                break;
+            case 4:
+                Instantiate(wallType.four, roomPosition, Quaternion.identity);
+                break;
+        }
     }
 
     public void FindEndRoom() {
@@ -115,4 +157,13 @@ public class Roomgenerater : MonoBehaviour
         else if(oneDoorRooms.Count == 0)
             endroom = farRooms[Random.Range(0, oneDoorRooms.Count)]; 
     }
+}
+
+[System.Serializable]
+public class WallType
+{
+    public GameObject singleup, singledown, singleleft, singleright,
+        doubleupdown, doubleupleft, doubleupright, doubleleftright, doubleleftdown, doubledownright,
+        triglenoup, triglenodown, triglenoleft, triglenoright,
+        four;
 }

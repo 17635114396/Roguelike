@@ -466,7 +466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -2.7}
+  m_LocalPosition: {x: -120, y: 1, z: -2.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -672,13 +672,43 @@ MonoBehaviour:
   roomPrefab: {fileID: 4350761221553850470, guid: a58ed903dc23fab4f96797c132c9562a,
     type: 3}
   roomNumber: 10
-  startColor: {r: 0.58626485, g: 0.09803921, b: 1, a: 1}
-  endColor: {r: 1, g: 0.5330188, b: 0.8168703, a: 1}
+  startColor: {r: 0.36954615, g: 1, b: 0.3160377, a: 1}
+  endColor: {r: 0.4198113, g: 0.47235042, b: 1, a: 1}
   StartPoint: {fileID: 533730586}
-  Xoffset: 66
-  Yoffset: 36
+  Xoffset: 82
+  Yoffset: 42
   maxStep: 0
   rooms: []
+  wallType:
+    singleup: {fileID: 6593231083634823999, guid: 9167be7d34e66404b8f5591ebd46aaf7,
+      type: 3}
+    singledown: {fileID: 6593231083634823999, guid: f602ed2e88ccc684eb21b2a77423302e,
+      type: 3}
+    singleleft: {fileID: 6593231083634823999, guid: 263530c0c34cb524096c8e4ab9764c31,
+      type: 3}
+    singleright: {fileID: 6593231083634823999, guid: e3ad18b2647c93b418abd5cd59cd672a,
+      type: 3}
+    doubleupdown: {fileID: 6593231083634823999, guid: d4d528c78f7fac042b3c159363358451,
+      type: 3}
+    doubleupleft: {fileID: 6593231083634823999, guid: c64fc839f32b53247b47ad66f026df63,
+      type: 3}
+    doubleupright: {fileID: 6593231083634823999, guid: 9783affa0aa72b74cb18265155b63b74,
+      type: 3}
+    doubleleftright: {fileID: 6593231083634823999, guid: 69ab9d77afa623d488d8787bcdac3b65,
+      type: 3}
+    doubleleftdown: {fileID: 6593231083634823999, guid: f2d62e87e3337d64ea48729a5fa79f86,
+      type: 3}
+    doubledownright: {fileID: 6593231083634823999, guid: 00e92643c80acbc40aa590b3bcb50752,
+      type: 3}
+    triglenoup: {fileID: 6593231083634823999, guid: 9b465fc93c3801e4d95717baccf9b56b,
+      type: 3}
+    triglenodown: {fileID: 6593231083634823999, guid: 5458d505e1159ec4a96550b7dd04501a,
+      type: 3}
+    triglenoleft: {fileID: 6593231083634823999, guid: 229642f9b4eb2184ea70d2ea8d4c9bac,
+      type: 3}
+    triglenoright: {fileID: 6593231083634823999, guid: f8f44085cdbc2e042a68fb8078490a57,
+      type: 3}
+    four: {fileID: 6593231083634823999, guid: 53da7f85c369817489b8d79d3e72010e, type: 3}
 --- !u!1 &2048746883
 GameObject:
   m_ObjectHideFlags: 0

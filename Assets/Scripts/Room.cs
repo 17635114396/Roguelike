@@ -28,7 +28,7 @@ public class Room : MonoBehaviour
     }
 
     public void UpDateRoom() {
-        stepToStart = (int)(Mathf.Abs(transform.position.x/66) + Mathf.Abs(transform.position.y/36));
+        stepToStart = (int)(Mathf.Abs(transform.position.x/82) + Mathf.Abs(transform.position.y/42));
         stepText.text = stepToStart.ToString();
         if (uproom)
             doorNumber++;
